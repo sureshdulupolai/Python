@@ -1,4 +1,5 @@
 import random
+from quiz_class import Quiz
 
 def QuizOperator(valueOne = 0, valueTwo = 0):
     OperationWith = RandomOpeartion()
@@ -72,6 +73,7 @@ def AnswerCheck(userAnswer, AnswerOfQuiz):
     if userAnswer == AnswerOfQuiz:
         print('Your answer is corrent, Now you can go in next round')
         print()
+        Quiz(count = 1, point = 100)
         MathsQuiz()
 
     else:
