@@ -18,7 +18,7 @@ def RandomOpeartion():
 # ----------------------------------------------------------------------------------------------------------
 def FormateOperation(operation, valueOne, valueTwo):
     if operation == 'addition':
-        AnswerOfQuiz = round(valueOne + valueTwo, 2)
+        AnswerOfQuiz = round(valueOne + valueTwo, 0)
 
         try:
             userAnswer = float(input('{} + {} = '.format(valueOne, valueTwo)))
@@ -29,7 +29,7 @@ def FormateOperation(operation, valueOne, valueTwo):
 
         
     elif operation == 'Substraction':
-        AnswerOfQuiz = AnswerOfQuiz = round(valueOne - valueTwo, 2)
+        AnswerOfQuiz = AnswerOfQuiz = round(valueOne - valueTwo, 0)
 
         try:
             userAnswer = float(input('{} - {} = '.format(valueOne, valueTwo)))
@@ -40,7 +40,7 @@ def FormateOperation(operation, valueOne, valueTwo):
 
         
     elif operation == 'Multiplaction':
-        AnswerOfQuiz = AnswerOfQuiz = round(valueOne * valueTwo, 2)
+        AnswerOfQuiz = AnswerOfQuiz = round(valueOne * valueTwo, 0)
 
         try:
             userAnswer = float(input('{} * {} = '.format(valueOne, valueTwo)))
@@ -51,8 +51,11 @@ def FormateOperation(operation, valueOne, valueTwo):
         
         
     elif operation == 'Division':
-        if valueTwo == 0: valueTwo += 1
-        AnswerOfQuiz = round(valueOne / valueTwo, 2)
+        
+        if valueTwo == 0: 
+            valueTwo += 1
+
+        AnswerOfQuiz = round(valueOne / valueTwo, 0)
 
         try:
             userAnswer = float(input('{} / {} = '.format(valueOne, valueTwo)))
@@ -63,7 +66,7 @@ def FormateOperation(operation, valueOne, valueTwo):
 
         
     elif operation == 'Mode':
-        AnswerOfQuiz = round(valueOne % valueTwo, 2)
+        AnswerOfQuiz = round(valueOne % valueTwo, 0)
 
         try:
             userAnswer = float(input('{} % {} = '.format(valueOne, valueTwo)))
