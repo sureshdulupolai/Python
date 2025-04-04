@@ -1,5 +1,4 @@
 import random
-from quiz_class import Quiz
 
 def QuizOperator(valueOne = 0, valueTwo = 0):
     OperationWith = RandomOpeartion()
@@ -66,14 +65,16 @@ def FormateOperation(operation, valueOne, valueTwo):
 
         except:
             print('\n-- Input in the Floating or Integer --')
-
-        
-
+counts = 0
+points = 0
 def AnswerCheck(userAnswer, AnswerOfQuiz):
+    global counts, points
     if userAnswer == AnswerOfQuiz:
         print('Your answer is corrent, Now you can go in next round')
         print()
-        Quiz(count = 1, point = 100)
+        counts += 1
+        points += 100
+        print(counts, ' ', points)
         MathsQuiz()
 
     else:
@@ -95,6 +96,7 @@ def StartExecute():
     QuizSecondVariable = lst[randomIndexForSecondVariable]
 
     return (QuizFirstVariable, QuizSecondVariable)
+
 # -----------------------------------------------------------------------
 def MathsQuiz():
 
