@@ -108,4 +108,8 @@ def MathsQuiz():
     elif (checkUserCondition in 'no') or (checkUserCondition in 'NO'):
         print('Thank you for playing maths quiz, Developer')
 
-MathsQuiz()
+
+if __name__ == "__main__":
+    MathsQuiz()
+else:
+    print('Welcome User To "Developer Quiz Game" ')
