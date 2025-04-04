@@ -12,7 +12,7 @@ def RandomOpeartion():
     
 def FormateOperation(operation, valueOne, valueTwo):
     if operation == 'addition':
-        AnswerOfQuiz = valueOne + valueTwo
+        AnswerOfQuiz = round(valueOne + valueTwo, 2)
 
         try:
             userAnswer = float(input('{} + {} = '.format(valueOne, valueTwo)))
@@ -23,7 +23,7 @@ def FormateOperation(operation, valueOne, valueTwo):
 
         
     elif operation == 'Substraction':
-        AnswerOfQuiz = valueOne - valueTwo
+        AnswerOfQuiz = AnswerOfQuiz = round(valueOne - valueTwo, 2)
 
         try:
             userAnswer = float(input('{} - {} = '.format(valueOne, valueTwo)))
@@ -34,7 +34,7 @@ def FormateOperation(operation, valueOne, valueTwo):
 
         
     elif operation == 'Multiplaction':
-        AnswerOfQuiz = valueOne * valueTwo
+        AnswerOfQuiz = AnswerOfQuiz = round(valueOne * valueTwo, 2)
 
         try:
             userAnswer = float(input('{} * {} = '.format(valueOne, valueTwo)))
@@ -46,7 +46,7 @@ def FormateOperation(operation, valueOne, valueTwo):
         
     elif operation == 'Division':
         if valueTwo == 0: valueTwo += 1
-        AnswerOfQuiz = valueOne / valueTwo
+        AnswerOfQuiz = round(valueOne / valueTwo, 2)
 
         try:
             userAnswer = float(input('{} / {} = '.format(valueOne, valueTwo)))
@@ -57,7 +57,7 @@ def FormateOperation(operation, valueOne, valueTwo):
 
         
     elif operation == 'Mode':
-        AnswerOfQuiz = valueOne % valueTwo
+        AnswerOfQuiz = round(valueOne % valueTwo, 2)
 
         try:
             userAnswer = float(input('{} % {} = '.format(valueOne, valueTwo)))
@@ -78,27 +78,25 @@ def AnswerCheck(userAnswer, AnswerOfQuiz):
         print('Oops!, You have not fill proper answer for this question')
         print('Your answer : {} \nCorrect Answer : {}'.format(userAnswer, AnswerOfQuiz))
 
-# -----------------------------------------------------------------------------------------
-lst = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+# ----------------------------------------------------------------------------------------
+def StartExecute():
+    lst = []
+    for DataForList in range(11):
+        Data = random.randint(0, 100)
+        if Data not in lst:
+            lst += [Data]
 
-# print(len(lst))
+    randomIndexForFirstVariable = random.randint(0, (len(lst) - 1))
+    randomIndexForSecondVariable = random.randint(0, (len(lst) - 1))
 
-# Random no generating for excessing with that index value from lst
-# ---------------------------------------------------------------------
-randomIndexForFirstVariable = random.randint(0, (len(lst) - 1))
-randomIndexForSecondVariable = random.randint(0, (len(lst) - 1))
-# print(randomIndexForFirstVariable)
-# print(randomIndexForSecondVariable)
+    QuizFirstVariable = lst[randomIndexForFirstVariable]
+    QuizSecondVariable = lst[randomIndexForSecondVariable]
 
-# Random Number From lst inside variable
-# ----------------------------------------------------------------------
-QuizFirstVariable = lst[randomIndexForFirstVariable]
-QuizSecondVariable = lst[randomIndexForSecondVariable]
-# print(QuizFirstVariable)
-# print(QuizSecondVariable)
-
+    return (QuizFirstVariable, QuizSecondVariable)
 # -----------------------------------------------------------------------
 def MathsQuiz():
+
+    QuizFirstVariable, QuizSecondVariable  = StartExecute()
 
     checkUserCondition = input('Continue or exit the quiz (y/n) : ')
 
