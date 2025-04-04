@@ -1,3 +1,4 @@
 from maths_quiz import MathsQuiz
 
-MathsQuiz()
+Var = MathsQuiz()
+print(Var)
