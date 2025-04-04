@@ -1,15 +1,21 @@
 import random
 
+# Step 3: Calling to operation operator function, and passing in formate operation func
+# ----------------------------------------------------------------------------------------------------------
 def QuizOperator(valueOne = 0, valueTwo = 0):
     OperationWith = RandomOpeartion()
     print("Question For : {}".format(OperationWith))
     FormateOperation(OperationWith, valueOne, valueTwo)
 
+# Step 4: Randomly seletion for operator from list
+# ----------------------------------------------------------------------------------------------------------
 def RandomOpeartion():
     randomValueOperation = random.randint(0, 4)
     OperationList = ['addition', 'Substraction', 'Multiplaction', 'Division', 'Mode']
     return OperationList[randomValueOperation]
     
+# Step 5: according to condition it print on screen and passing data from user and ans is matching or not
+# ----------------------------------------------------------------------------------------------------------
 def FormateOperation(operation, valueOne, valueTwo):
     if operation == 'addition':
         AnswerOfQuiz = round(valueOne + valueTwo, 2)
@@ -65,8 +71,10 @@ def FormateOperation(operation, valueOne, valueTwo):
 
         except:
             print('\n-- Input in the Floating or Integer --')
-counts = 0
-points = 0
+
+# Step 6: checking ans is same the increase count and point, else end the quiz
+# ----------------------------------------------------------------------------------------------------------
+counts = 0; points = 0
 def AnswerCheck(userAnswer, AnswerOfQuiz):
     global counts, points
     if userAnswer == AnswerOfQuiz:
@@ -74,14 +82,14 @@ def AnswerCheck(userAnswer, AnswerOfQuiz):
         print()
         counts += 1
         points += 100
-        print(counts, ' ', points)
         MathsQuiz()
 
     else:
         print('Oops!, You have not fill proper answer for this question')
         print('Your answer : {} \nCorrect Answer : {}'.format(userAnswer, AnswerOfQuiz))
 
-# ----------------------------------------------------------------------------------------
+# Step 2: Generating a list len of 10, between range 0 to 100, and passing to MathQuiz Function
+# ----------------------------------------------------------------------------------------------------------
 def StartExecute():
     lst = []
     for DataForList in range(11):
@@ -97,7 +105,8 @@ def StartExecute():
 
     return (QuizFirstVariable, QuizSecondVariable)
 
-# -----------------------------------------------------------------------
+# Step 1: Start Execute here, Check Operatior and Condition to Play or Not
+# ----------------------------------------------------------------------------------------------------------
 def MathsQuiz():
 
     QuizFirstVariable, QuizSecondVariable  = StartExecute()
@@ -110,7 +119,16 @@ def MathsQuiz():
     elif (checkUserCondition in 'no') or (checkUserCondition in 'NO'):
         print('Thank you for playing maths quiz, Developer')
 
+# If User Need To Check Point or Count Then Call Directily To The Function
+# ----------------------------------------------------------------------------------------------------------
+def Points():
+    return points
 
+def Counts():
+    return counts
+
+# Main Function Will Check Every Time, It Doesnt Matter You Are On Which File. When You Are Executing Quiz.
+# ----------------------------------------------------------------------------------------------------------
 if __name__ == "__main__":
     MathsQuiz()
 else:
