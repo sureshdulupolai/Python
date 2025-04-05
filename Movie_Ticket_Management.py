@@ -79,3 +79,16 @@ seats = [
         'status': 'Available'
     },
 ]
+
+def checkTickect():
+    movieAvailable = []
+    for mov in Movie:
+        valueSeat = mov['seat']
+        for place in seats:
+            if (place['id'] == valueSeat) and (place['status'] == 'Available'):
+                movieAvailable += [(mov, place)]
+    
+    for inAvailableMovie in movieAvailable:
+        print(inAvailableMovie)
+
+checkTickect()
