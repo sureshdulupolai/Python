@@ -17,27 +17,27 @@
 Movie = [
     {
         'movie_name': 'Shershaah',
-        'price': '180',
+        'price': 180,
         'seat': 1,
     },
     {
         'movie_name': 'Pathaan',
-        'price': '220',
+        'price': 220,
         'seat': 2,
     },
     {
         'movie_name': 'RRR (Hindi)',
-        'price': '250',
+        'price': 250,
         'seat': 3,
     },
     {
         'movie_name': 'Jawaan',
-        'price': '210',
+        'price': 210,
         'seat': 4,
     },
     {
         'movie_name': '3 Idiots',
-        'price': '150',
+        'price': 150,
         'seat': 5,
     },
 ]
@@ -80,7 +80,7 @@ seats = [
     },
 ]
 
-def checkTickect():
+def CombineMovieSeats():
     movieAvailable = []
     for mov in Movie:
         valueSeat = mov['seat']
@@ -88,7 +88,23 @@ def checkTickect():
             if (place['id'] == valueSeat) and (place['status'] == 'Available'):
                 movieAvailable += [(mov, place)]
     
-    for inAvailableMovie in movieAvailable:
-        print(inAvailableMovie)
+    return movieAvailable
 
-checkTickect()
+CMS = CombineMovieSeats()
+# print(CMS)
+
+def ListOfNameMovieData():
+    lstOfUserMovieAvailable = []
+    for CMSCheck in CMS:
+        for NewData in range(1):
+            lstOfUserMovieAvailable += [(CMSCheck[0]['movie_name'], CMSCheck[0]['price'], CMSCheck[1]['available'], CMSCheck[1]['total'], CMSCheck[1]['book'])]
+    
+    return lstOfUserMovieAvailable
+
+ListOfMovieData = ListOfNameMovieData()
+
+def UserNameMovie():
+    for ListData in ListOfMovieData:
+        print(ListData)
+
+UserNameMovie()
