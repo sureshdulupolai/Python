@@ -80,6 +80,8 @@ seats = [
     },
 ]
 
+# Django Structure of Movie Ticket
+# -------------------------------------------------------------------------------------------
 def CombineMovieSeats():
     movieAvailable = []
     for mov in Movie:
@@ -104,7 +106,20 @@ def ListOfNameMovieData():
 ListOfMovieData = ListOfNameMovieData()
 
 def UserNameMovie():
+    lstOfMovies = []
     for ListData in ListOfMovieData:
-        print(ListData)
+        lstOfMovies += [
+            (
+                "Movie", ':', ListData[0],
+                "Price", ':', ListData[1],
+                "Remeaning Seats", ':', ListData[2],
+                "Total Seats", ':', ListData[3],
+                "Booked Seats", ':', ListData[4],
+            )
+        ]
+    
+    print('\n-- Available Movie Showen in Django Templates --\n')
+    for Movies in lstOfMovies:
+        print(*Movies)
 
 UserNameMovie()
