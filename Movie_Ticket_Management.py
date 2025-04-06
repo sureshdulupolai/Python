@@ -1,18 +1,4 @@
 # 🎟️ 1. Movie Ticket Booking System
-# Class: Movie, Theatre, User
-
-# Features:
-
-# Dekho kaunse shows available hain
-
-# Book ticket (limited seats logic)
-
-# Cancel ticket
-
-# Data Storage: Seat availability list, showtime dict
-
-# Bonus: Seating layout dikhane ki koshish karo (2D list)
-
 
 Movie = [
     {
@@ -82,14 +68,18 @@ seats = [
 
 # Django Structure of Movie Ticket
 # -------------------------------------------------------------------------------------------
-def CombineMovieSeats():
+def CombineMovieSeats(seatUpgrade = 0, seatsFor = 0):
     movieAvailable = []
     for mov in Movie:
         valueSeat = mov['seat']
         for place in seats:
             if (place['id'] == valueSeat) and (place['status'] == 'Available'):
                 movieAvailable += [(mov, place)]
-    
+            if (seatUpgrade != 0) and (seatsFor != 0):
+                if place['id'] == seatsFor:
+                    place['book'] += 1
+                    place['available'] -= 1
+
     return movieAvailable
 
 CMS = CombineMovieSeats()
@@ -122,4 +112,26 @@ def UserNameMovie():
     for Movies in lstOfMovies:
         print(*Movies)
 
-UserNameMovie()
+# Check Available Movie Status
+# ------------------------------------------------------------------------
+# UserNameMovie()
+def MovieUpgrade():
+    UserName = input('Enter Your Name : '); EnterYourAge = int(input('Enter Your Age : ')); UserNameMovie(); movieName = int(input('\nWhich ticket you need to book : ')); movieSeatsBook = int(input('How many seats you need to book : ')); CheckCondition = int(input('Conform you need to book this ticket : '))
+    if CheckCondition == 1:
+        CombineMovieSeats(seatUpgrade=movieSeatsBook, seatsFor=movieName)
+        print('Your Ticket Booked Successfully Mr/Ms {}'.format(UserName))
+    else:
+        print('The Movie Does Not Exist, Id Not Matched!!')
+
+def Movies():
+    try:
+        StatusCheck = int(input('What You Need To Check : \n1. Movie \n2. Check Status \n3. Your Movie Book'))
+        if StatusCheck == 1:
+            MovieUpgrade()
+        elif StatusCheck == 2:
+            UserNameMovie()
+        elif StatusCheck == 3:
+            pass
+    
+    except:
+        print('The Input Does Not Match With Any Feild!')
