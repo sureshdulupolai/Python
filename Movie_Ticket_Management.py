@@ -79,8 +79,6 @@ def CombineMovieSeats(seatUpgrade = 0, seatsFor = 0):
                 if place['id'] == seatsFor:
                     place['book'] += 1
                     place['available'] -= 1
-                    print(place['book'])
-                    print(place['available'])
 
     return movieAvailable
 
