@@ -79,6 +79,8 @@ def CombineMovieSeats(seatUpgrade = 0, seatsFor = 0):
                 if place['id'] == seatsFor:
                     place['book'] += 1
                     place['available'] -= 1
+                    print(place['book'])
+                    print(place['available'])
 
     return movieAvailable
 
@@ -115,23 +117,22 @@ def UserNameMovie():
 # Check Available Movie Status
 # ------------------------------------------------------------------------
 # UserNameMovie()
-def MovieUpgrade():
-    UserName = input('Enter Your Name : '); EnterYourAge = int(input('Enter Your Age : ')); UserNameMovie(); movieName = int(input('\nWhich ticket you need to book : ')); movieSeatsBook = int(input('How many seats you need to book : ')); CheckCondition = int(input('Conform you need to book this ticket : '))
-    if CheckCondition == 1:
-        CombineMovieSeats(seatUpgrade=movieSeatsBook, seatsFor=movieName)
-        print('Your Ticket Booked Successfully Mr/Ms {}'.format(UserName))
-    else:
-        print('The Movie Does Not Exist, Id Not Matched!!')
 
 def Movies():
     try:
-        StatusCheck = int(input('What You Need To Check : \n1. Movie \n2. Check Status \n3. Your Movie Book'))
-        if StatusCheck == 1:
-            MovieUpgrade()
-        elif StatusCheck == 2:
+        UserName = input('Enter Your Name : ')
+        EnterYourAge = int(input('Enter Your Age : '))
+        UserNameMovie()
+        movieName = int(input('\nWhich ticket you need to book : '))
+        movieSeatsBook = int(input('How many seats you need to book : '))
+        CheckCondition = int(input('Conform you need to book this ticket : '))
+        # print(bool(CheckCondition == 1))
+        if CheckCondition == 1:
+            CombineMovieSeats(seatUpgrade=movieSeatsBook, seatsFor=movieName)
+            print('Your Ticket Booked Successfully Mr/Ms {}'.format(UserName))
             UserNameMovie()
-        elif StatusCheck == 3:
-            pass
+        else:
+            print('The Movie Does Not Exist, Id Not Matched!!')
     
     except:
         print('The Input Does Not Match With Any Feild!')
