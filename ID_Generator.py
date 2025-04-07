@@ -8,7 +8,7 @@ def idGeneratorForCompany(CompanyCode, Loop = 1):
     NewCompanyCodeLstOfUser = []
     for Lp in range(Loop):
         CC = CompanyCode
-        RC = str(random.randint(1, 10))
+        RC = str(random.randint(12, 30))
         CCRC = CC + RC
         if len(NewCompanyCodeLstOfUser) > 0:
             for NccuData in NewCompanyCodeLstOfUser:
@@ -16,20 +16,18 @@ def idGeneratorForCompany(CompanyCode, Loop = 1):
                 for a1 in NccuData:
                     if a1.isdigit():
                         NoOfCode += str(a1)
-            print(NoOfCode)
-
-            # for NCCU in NewCompanyCodeLstOfUser:
-            #     if CCRC not in NCCU:
-            #         NewCompanyCodeLstOfUser += [CCRC]
-            #         break
-            #     else:
-            #         continue
+                
+                if int(RC) != int(NoOfCode):
+                    NewCompanyCodeLstOfUser += [CCRC]
+                    break   
+                else:
+                    continue
         else:
             NewCompanyCodeLstOfUser += [CCRC]
-    
-    # print(len(NewCompanyCodeLstOfUser))
+
+    print(len(NewCompanyCodeLstOfUser))
     # print()
-    # print(NewCompanyCodeLstOfUser)
+    print(NewCompanyCodeLstOfUser)
 
 CodeOfCompanyPassing = lstOfCompanyId[0]
-idGeneratorForCompany(CompanyCode = CodeOfCompanyPassing, Loop = 100)
+idGeneratorForCompany(CompanyCode = CodeOfCompanyPassing, Loop = 5)
