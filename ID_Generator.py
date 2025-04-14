@@ -46,4 +46,3 @@ obj.Counts(obj = id_obj)
 
 # CodeOfCompanyPassing = lstOfCompanyId[0]
 # idGeneratorForCompany(CompanyCode = CodeOfCompanyPassing, Loop = 5)
-
