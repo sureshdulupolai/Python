@@ -16,7 +16,6 @@ currentMinute = datetime.now().minute
 currentSecond = datetime.now().second
 # print(currentTime)
 
-
 # Source Code For User Website
 # -------------------------------------------------------------------
 # userHour = int(input('Enter Your Hour : '))
