@@ -24,3 +24,11 @@ b = 15
 print(a) if a>b else print(b)
 
 # -----------------------------------------------
+# list inside if condition
+lst1 = [
+    x for x in range(0, 21) if x%2 == 0
+]
+
+print(lst1)
+
+# -----------------------------------------------
