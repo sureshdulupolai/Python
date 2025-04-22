@@ -32,3 +32,7 @@ lst1 = [
 print(lst1)
 
 # -----------------------------------------------
+# even, odd no in list
+even, odd = [y for y in range(0, 21) if y%2 == 0], [s for s in range(0, 21) if s%2 == 1]
+print(even, ' ', odd)
+
