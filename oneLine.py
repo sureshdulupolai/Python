@@ -36,3 +36,10 @@ print(lst1)
 even, odd = [y for y in range(0, 21) if y%2 == 0], [s for s in range(0, 21) if s%2 == 1]
 print(even, ' ', odd)
 
+# ------------------------------------------------
+
+lst2 = [
+    a1 for a1 in range(0, 21) if a1%2 == 0
+]
+
+print(lst2)
