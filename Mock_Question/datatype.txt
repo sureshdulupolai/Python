@@ -1,0 +1,62 @@
+✅ 1. List
+Definition: Ordered, mutable (changeable), and allows duplicate values.
+
+Syntax: my_list = [10, 20, 30, 40]
+
+Key Features:
+
+Indexable and sliceable.
+
+Can contain mixed data types.
+
+Methods: append(), extend(), insert(), pop(), remove(), sort(), etc.
+
+✅ 2. Tuple
+Definition: Ordered, immutable (cannot be changed), and allows duplicate values.
+
+Syntax: my_tuple = (10, 20, 30)
+
+Key Features:
+
+Faster than lists (due to immutability).
+
+Used when data should not change.
+
+Can also be nested.
+
+Methods: count(), index().
+
+✅ 3. Set
+Definition: Unordered, mutable, and does not allow duplicates.
+
+Syntax: my_set = {10, 20, 30}
+
+Key Features:
+
+Cannot access elements by index.
+
+Useful for mathematical operations like union, intersection, difference.
+
+Methods: add(), remove(), union(), intersection(), difference(), etc.
+
+✅ 4. Dictionary
+Definition: Unordered, mutable collection of key-value pairs.
+
+Syntax: my_dict = {'name': 'Suresh', 'age': 22}
+
+Key Features:
+
+Keys are unique and immutable.
+
+Values can be of any type.
+
+Methods: get(), keys(), values(), items(), update(), pop().
+
+🔁 Summary:
+List = Ordered, Mutable, Duplicates allowed.
+
+Tuple = Ordered, Immutable, Duplicates allowed.
+
+Set = Unordered, Mutable, No Duplicates.
+
+Dictionary = Unordered, Mutable, Key-Value pair, Unique keys.
