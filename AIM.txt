@@ -18,3 +18,30 @@
 -- Rest API ( 4 / 10 )
 -- React ( 1 / 10 )
 -- MS Office ( 9 / 10 )
+
+
+import openai
+
+# Set your OpenAI API key
+openai.api_key = ""  # Replace with your real key
+
+def Chat_With_GPT(prompt):
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[{"role": "user", "content": prompt}]
+    )
+    return response.choices[0].message["content"].strip()
+
+if __name__ == '__main__':
+    print("Type 'exit', 'quit', or 'bye' to end the chat.")
+    while True:
+        user_input = input("You: ")
+        if user_input.lower() in ["quit", "exit", "bye"]:
+            print("Chatbot: Goodbye!")
+            break
+
+        try:
+            response = Chat_With_GPT(user_input)
+            print("Chatbot:", response)
+        except Exception as e:
+            print("Error:", e)
