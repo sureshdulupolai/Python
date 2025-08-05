@@ -1,0 +1,14 @@
+-- Testing
+Python -> Pytest, Selenium, Robot Framework, unittest, behave, request + pytest
+Js -> Cypress, Playwright, Jest
+
+-- Libraries
+Py -> pandas, openpyxl / xlrd, requests, json, os / shutil / pathlib, re (regex), time / datetime
+
+pandas - > data analysis, ( CSV, Excel, JSON )
+openpyxl / xlrd -> Reading and Writing Excel Files
+requests -> Making HTTP API Calls for API Testing
+json -> Parsing and validating JSON data (used in APIs)
+os / shutil / pathlib -> file system handling managing test files, logs, etc
+re (regex) -> validating strings, formats, and Parsing logs and responses
+time / datetime -> working with timestamps, test scheduling, or delays.

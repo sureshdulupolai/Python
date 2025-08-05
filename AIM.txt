@@ -1,0 +1,20 @@
+-- WordPress
+-- Python Complete with Libraries
+-- Figma
+-- Java
+-- node.js
+-- DSA 
+
+--im_.sureshhh  -- thedevelopersuresh
+
+-- C ( 5 / 10 )
+-- C++ ( 3/ 10 )
+-- HTML, CSS ( 7.5 / 10 )
+-- BOOTSTRAP ( 8 / 10 )
+-- Python ( 8.5 / 10 )
+-- JavaScript ( 4 / 10 )
+-- SQL ( 7 / 10 )
+-- DJANGO ( 9 / 10 )
+-- Rest API ( 4 / 10 )
+-- React ( 1 / 10 )
+-- MS Office ( 9 / 10 )
