@@ -1,0 +1,534 @@
+1. **What will the following code output?**
+
+```python
+x = 10
+if x > 5:
+    print("Greater")
+else:
+    print("Smaller")
+```
+
+a) Greater  
+b) Smaller  
+c) Error  
+d) None  
+
+**Answer**: a) Greater
+
+---
+
+### 2. **What will be printed for the following code?**
+
+```python
+x = 4
+y = 5
+if x < y:
+    print("Yes")
+else:
+    print("No")
+```
+
+a) Yes  
+b) No  
+c) Error  
+d) None  
+
+**Answer**: a) Yes
+
+---
+
+### 3. **What will the following code print?**
+
+```python
+x = 8
+if x % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+```
+
+a) Even  
+b) Odd  
+c) Error  
+d) None  
+
+**Answer**: a) Even
+
+---
+
+### 4. **Which of the following will return `True`?**
+
+```python
+x = 4
+if x % 2 == 0:
+    print(True)
+else:
+    print(False)
+```
+
+a) False  
+b) Error  
+c) True  
+d) None  
+
+**Answer**: c) True
+
+---
+
+### 5. **What will the following code output?**
+
+```python
+a = 5
+b = 10
+if a == b:
+    print("Equal")
+else:
+    print("Not Equal")
+```
+
+a) Equal  
+b) Not Equal  
+c) Error  
+d) None  
+
+**Answer**: b) Not Equal
+
+---
+
+### 6. **What will be the output of the following code?**
+
+```python
+x = 0
+if x:
+    print("True")
+else:
+    print("False")
+```
+
+a) True  
+b) False  
+c) Error  
+d) None  
+
+**Answer**: b) False
+
+---
+
+### 7. **Which of the following will return `True`?**
+
+```python
+x = 3
+if x != 5:
+    print(True)
+else:
+    print(False)
+```
+
+a) True  
+b) False  
+c) Error  
+d) None  
+
+**Answer**: a) True
+
+---
+
+### 8. **What will the following code print?**
+
+```python
+x = 10
+if x == 10:
+    print("Correct")
+else:
+    print("Incorrect")
+```
+
+a) Correct  
+b) Incorrect  
+c) Error  
+d) None  
+
+**Answer**: a) Correct
+
+---
+
+### 9. **What will the output of the following code be?**
+
+```python
+x = -5
+if x < 0:
+    print("Negative")
+else:
+    print("Positive")
+```
+
+a) Negative  
+b) Positive  
+c) Error  
+d) None  
+
+**Answer**: a) Negative
+
+---
+
+### 10. **What will the output of the following code be?**
+
+```python
+x = 15
+if x % 5 == 0:
+    print("Divisible")
+else:
+    print("Not Divisible")
+```
+
+a) Divisible  
+b) Not Divisible  
+c) Error  
+d) None  
+
+**Answer**: a) Divisible
+
+---
+
+### 11. **What will the following code output?**
+
+```python
+x = 100
+if x > 50:
+    print("Greater")
+else:
+    print("Smaller")
+```
+
+a) Greater  
+b) Smaller  
+c) Error  
+d) None  
+
+**Answer**: a) Greater
+
+---
+
+### 12. **What will be printed for the following code?**
+
+```python
+x = 0
+if x:
+    print("True")
+else:
+    print("False")
+```
+
+a) True  
+b) False  
+c) Error  
+d) None  
+
+**Answer**: b) False
+
+---
+
+### 13. **What will be the output of the following code?**
+
+```python
+x = 3
+y = 5
+if x > y:
+    print("X is greater")
+else:
+    print("Y is greater")
+```
+
+a) X is greater  
+b) Y is greater  
+c) Error  
+d) None  
+
+**Answer**: b) Y is greater
+
+---
+
+### 14. **What will the following code output?**
+
+```python
+x = 4
+if x == 4:
+    print("Match")
+else:
+    print("No Match")
+```
+
+a) Match  
+b) No Match  
+c) Error  
+d) None  
+
+**Answer**: a) Match
+
+---
+
+### 15. **Which of the following will return `True`?**
+
+```python
+x = 10
+if x > 5:
+    print(True)
+else:
+    print(False)
+```
+
+a) False  
+b) Error  
+c) True  
+d) None  
+
+**Answer**: c) True
+
+---
+
+### 16. **What will be printed for the following code?**
+
+```python
+x = 2
+if x == 1:
+    print("One")
+elif x == 2:
+    print("Two")
+else:
+    print("Other")
+```
+
+a) One  
+b) Two  
+c) Other  
+d) None  
+
+**Answer**: b) Two
+
+---
+
+### 17. **What will the following code output?**
+
+```python
+x = 10
+if x < 15 and x > 5:
+    print("In range")
+else:
+    print("Out of range")
+```
+
+a) In range  
+b) Out of range  
+c) Error  
+d) None  
+
+**Answer**: a) In range
+
+---
+
+### 18. **What will the following code print?**
+
+```python
+x = 4
+if x != 3:
+    print("Not equal")
+else:
+    print("Equal")
+```
+
+a) Not equal  
+b) Equal  
+c) Error  
+d) None  
+
+**Answer**: a) Not equal
+
+---
+
+### 19. **What will the output of the following code be?**
+
+```python
+x = 50
+if x < 100:
+    print("Less than 100")
+else:
+    print("Greater than or equal to 100")
+```
+
+a) Less than 100  
+b) Greater than or equal to 100  
+c) Error  
+d) None  
+
+**Answer**: a) Less than 100
+
+---
+
+### 20. **What will be printed for the following code?**
+
+```python
+x = 12
+if x % 3 == 0:
+    print("Multiple of 3")
+else:
+    print("Not a multiple of 3")
+```
+
+a) Multiple of 3  
+b) Not a multiple of 3  
+c) Error  
+d) None  
+
+**Answer**: a) Multiple of 3
+
+---
+
+### 21. **What will be printed by the following code?**
+
+```python
+x = 7
+if x % 2 == 1:
+    print("Odd")
+else:
+    print("Even")
+```
+
+a) Odd  
+b) Even  
+c) Error  
+d) None  
+
+**Answer**: a) Odd
+
+---
+
+### 22. **What will the following code output?**
+
+```python
+x = 8
+if x < 5:
+    print("Small")
+else:
+    print("Large")
+```
+
+a) Small  
+b) Large  
+c) Error  
+d) None  
+
+**Answer**: b) Large
+
+---
+
+### 23. **What will the following code print?**
+
+```python
+x = 10
+if x > 20:
+    print("Greater")
+else:
+    print("Smaller")
+```
+
+a) Greater  
+b) Smaller  
+c) Error  
+d) None  
+
+**Answer**: b) Smaller
+
+---
+
+### 24. **What will be printed for the following code?**
+
+```python
+x = -1
+if x < 0:
+    print("Negative")
+else:
+    print("Positive")
+```
+
+a) Negative  
+b) Positive  
+c) Error  
+d) None  
+
+**Answer**: a) Negative
+
+---
+
+### 25. **What will the output be for the following code?**
+
+```python
+x = 25
+if x == 25:
+    print("Matched")
+else:
+    print("Not Matched")
+```
+
+a) Matched  
+b) Not Matched  
+c) Error  
+d) None  
+
+**Answer**: a) Matched
+
+---
+
+### 26. **What will be printed for the following code?**
+
+```python
+x = 3
+if x % 2 != 0:
+    print("Odd")
+else:
+    print("Even")
+```
+
+a) Odd  
+b) Even  
+c) Error  
+d) None  
+
+**Answer**: a) Odd
+
+---
+
+### 27. **What will be the output of the following code?**
+
+```python
+x = 30
+if x < 50:
+    print("Less")
+else:
+    print("More")
+```
+
+a) Less  
+b) More  
+c) Error  
+d) None  
+
+**Answer**: a) Less
+
+---
+
+### 28. **What will be the output for the following code?**
+
+```python
+x = 15
+if x % 3 == 0:
+    print("Divisible by 3")
+else:
+    print("Not divisible by 3")
+```
+
+a) Divisible by 3  
+b) Not divisible by 3  
+c) Error  
+d) None  
+
+**Answer**

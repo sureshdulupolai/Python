@@ -1,0 +1,305 @@
+# college 30 question
+
+Here is a list of **50 simple and basic logical questions in Python**, written without using loops or functions. These questions primarily focus on the use of conditionals (if-else statements), comparisons, and basic Python operations.
+
+---
+
+### 1. **Check if a number is positive or negative**
+```python
+num = int(input("Enter a number: "))
+if num > 0:
+    print("Positive")
+elif num < 0:
+    print("Negative")
+else:
+    print("Zero")
+```
+
+### 2. **Check if a number is even or odd**
+```python
+num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+```
+
+### 3. **Check if a number is divisible by 5**
+```python
+num = int(input("Enter a number: "))
+if num % 5 == 0:
+    print("Divisible by 5")
+else:
+    print("Not divisible by 5")
+```
+
+### 4. **Check if a number is a multiple of both 3 and 5**
+```python
+num = int(input("Enter a number: "))
+if num % 3 == 0 and num % 5 == 0:
+    print("Multiple of both 3 and 5")
+else:
+    print("Not a multiple of both 3 and 5")
+```
+
+### 5. **Check if a number is a multiple of 3 or 5**
+```python
+num = int(input("Enter a number: "))
+if num % 3 == 0 or num % 5 == 0:
+    print("Multiple of 3 or 5")
+else:
+    print("Not a multiple of 3 or 5")
+```
+
+### 6. **Check if a number is divisible by 7 but not by 5**
+```python
+num = int(input("Enter a number: "))
+if num % 7 == 0 and num % 5 != 0:
+    print("Divisible by 7 but not 5")
+else:
+    print("Condition not satisfied")
+```
+
+### 7. **Check if a number is a palindrome (e.g., 121, 1221)**
+```python
+num = input("Enter a number: ")
+if num == num[::-1]:
+    print("Palindrome")
+else:
+    print("Not a palindrome")
+```
+
+### 8. **Check if a number is a prime number**
+```python
+num = int(input("Enter a number: "))
+if num > 1:
+    for i in range(2, num):
+        if num % i == 0:
+            print("Not prime")
+            break
+    else:
+        print("Prime")
+else:
+    print("Not prime")
+```
+
+### 9. **Check if a string is empty**
+```python
+string = input("Enter a string: ")
+if string == "":
+    print("String is empty")
+else:
+    print("String is not empty")
+```
+
+### 10. **Check if a character is a vowel**
+```python
+char = input("Enter a character: ").lower()
+if char in 'aeiou':
+    print("Vowel")
+else:
+    print("Consonant")
+```
+
+### 11. **Find the larger of two numbers**
+```python
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+if a > b:
+    print("Larger number is:", a)
+else:
+    print("Larger number is:", b)
+```
+
+### 12. **Check if a year is a leap year**
+```python
+year = int(input("Enter a year: "))
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print("Leap year")
+else:
+    print("Not a leap year")
+```
+
+### 13. **Check if a number is divisible by 2, 3, or 5**
+```python
+num = int(input("Enter a number: "))
+if num % 2 == 0 or num % 3 == 0 or num % 5 == 0:
+    print("Divisible by 2, 3, or 5")
+else:
+    print("Not divisible by 2, 3, or 5")
+```
+
+### 14. **Check if a number is between 10 and 50**
+```python
+num = int(input("Enter a number: "))
+if 10 <= num <= 50:
+    print("Number is between 10 and 50")
+else:
+    print("Number is not between 10 and 50")
+```
+
+### 15. **Find the smallest of three numbers**
+```python
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+c = int(input("Enter third number: "))
+if a <= b and a <= c:
+    print("Smallest number is:", a)
+elif b <= a and b <= c:
+    print("Smallest number is:", b)
+else:
+    print("Smallest number is:", c)
+```
+
+### 16. **Check if a number is a perfect square**
+```python
+num = int(input("Enter a number: "))
+if (num ** 0.5).is_integer():
+    print("Perfect square")
+else:
+    print("Not a perfect square")
+```
+
+### 17. **Check if a string contains a specific character**
+```python
+string = input("Enter a string: ")
+char = input("Enter a character: ")
+if char in string:
+    print(f"The character '{char}' is present in the string")
+else:
+    print(f"The character '{char}' is not present in the string")
+```
+
+### 18. **Check if a number is divisible by 2 but not 4**
+```python
+num = int(input("Enter a number: "))
+if num % 2 == 0 and num % 4 != 0:
+    print("Divisible by 2 but not 4")
+else:
+    print("Condition not satisfied")
+```
+
+### 19. **Check if a number is negative and odd**
+```python
+num = int(input("Enter a number: "))
+if num < 0 and num % 2 != 0:
+    print("Negative and odd")
+else:
+    print("Not negative or not odd")
+```
+
+### 20. **Check if a number is greater than 100**
+```python
+num = int(input("Enter a number: "))
+if num > 100:
+    print("Greater than 100")
+else:
+    print("Less than or equal to 100")
+```
+
+### 21. **Find the largest of two numbers**
+```python
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+if a > b:
+    print("Largest number is:", a)
+else:
+    print("Largest number is:", b)
+```
+
+### 22. **Check if a number is divisible by 10**
+```python
+num = int(input("Enter a number: "))
+if num % 10 == 0:
+    print("Divisible by 10")
+else:
+    print("Not divisible by 10")
+```
+
+### 23. **Check if two strings are equal**
+```python
+str1 = input("Enter first string: ")
+str2 = input("Enter second string: ")
+if str1 == str2:
+    print("Strings are equal")
+else:
+    print("Strings are not equal")
+```
+
+### 24. **Check if a number is a multiple of 4 but not a multiple of 6**
+```python
+num = int(input("Enter a number: "))
+if num % 4 == 0 and num % 6 != 0:
+    print("Multiple of 4 but not 6")
+else:
+    print("Condition not satisfied")
+```
+
+### 25. **Check if a number is greater than 0 and less than 10**
+```python
+num = int(input("Enter a number: "))
+if 0 < num < 10:
+    print("Number is between 0 and 10")
+else:
+    print("Number is not between 0 and 10")
+```
+
+### 26. **Check if a number is less than 100 but divisible by 2**
+```python
+num = int(input("Enter a number: "))
+if num < 100 and num % 2 == 0:
+    print("Less than 100 and divisible by 2")
+else:
+    print("Condition not satisfied")
+```
+
+### 27. **Check if a number is divisible by 4 or 6**
+```python
+num = int(input("Enter a number: "))
+if num % 4 == 0 or num % 6 == 0:
+    print("Divisible by 4 or 6")
+else:
+    print("Not divisible by 4 or 6")
+```
+
+### 28. **Check if a number is a perfect cube**
+```python
+num = int(input("Enter a number: "))
+if round(num ** (1/3)) ** 3 == num:
+    print("Perfect cube")
+else:
+    print("Not a perfect cube")
+```
+
+### 29. **Check if a number is a multiple of 11**
+```python
+num = int(input("Enter a number: "))
+if num % 11 == 0:
+    print("Multiple of 11")
+else:
+    print("Not a multiple of 11")
+```
+
+### 30. **Check if a number is an Armstrong number**
+```python
+num = int(input("Enter a number: "))
+num_str = str(num)
+length = len(num_str)
+sum = sum(int(digit) ** length for digit in num
+
+def is_armstrong(number):
+    # Convert the number to string to easily iterate over digits
+    digits = str(number)
+    num_digits = len(digits)
+    
+    # Calculate the sum of the digits raised to the power of num_digits
+    sum_of_powers = sum(int(digit) ** num_digits for digit in digits)
+    
+    # Check if the sum is equal to the original number
+    return sum_of_powers == number
+
+num = int(input("Enter a number: "))
+if is_armstrong(num):
+    print(f"{num} is an Armstrong number.")
+else:
+    print(f"{num} is not an Armstrong number.")

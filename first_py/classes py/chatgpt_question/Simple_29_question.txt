@@ -1,0 +1,417 @@
+1.  Check Positive, Negative, or Zero
+2.  Check Divisibility by 5
+3.  Find the Largest of Three Numbers
+4.  Check Leap Year
+5.  Find the Factorial of a Number
+6.  Check if a Number is Prime
+7.  Sum of Digits of a Number
+8.  Check Whether a Number is Palindrome
+9.  Count Vowels in a String
+10. Find the Average of Numbers Entered by User
+11. Check if Number is Divisible by 3
+12. Check if Number is Divisible by 7
+13. Check if a Number is a Multiple of 10
+14. Check if the Number is Positive Even or Odd
+15. Check if Number is Greater than 100
+16. Check if the Number is Odd or Even
+17. Check if the Number is Zero
+18. Check if the Number is Less than 50
+19. Check if the Number is Negative or Non-Negative
+20. Check if Number is Even and Greater than 10
+21. Check if a Number is Between 1 and 100
+22. Check if the Number is Divisible by 2 or 5
+23. Check if Number is an Integer
+24. Check if Number is a Multiple of 3 and 5
+25. Check if Number is Less Than 10 or Greater Than 100
+26. Check if the Number is a Square
+27. Check if Number is Between 50 and 150
+28. Check if the Number is Divisible by Both 2 and 3
+29. Check if the Number is Greater Than 200
+
+# ---------------------------------------------------------------------------------------------
+1. Check Positive, Negative, or Zero
+
+value = int(input("Enter a number: "))
+
+if value > 0:
+    print("Positive Number")
+elif value < 0:
+    print("Negative Number")
+else:
+    print("Zero")
+
+# ---------------------------------------------------------------------------------------------
+2. Check Divisibility by 5
+
+value = int(input("Enter a number to check divisibility by 5: "))
+
+if value % 5 == 0:
+    print(f"{value} is divisible by 5")
+else:
+    print(f"{value} is not divisible by 5")
+
+# ---------------------------------------------------------------------------------------------
+3. Find the Largest of Three Numbers
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+num3 = int(input("Enter third number: "))
+
+if num1 >= num2 and num1 >= num3:
+    print(f"The largest number is {num1}")
+elif num2 >= num1 and num2 >= num3:
+    print(f"The largest number is {num2}")
+else:
+    print(f"The largest number is {num3}")
+
+# ---------------------------------------------------------------------------------------------
+4. Check Leap Year
+
+year = int(input("Enter a year to check if it is a leap year: "))
+
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(f"{year} is a Leap Year")
+else:
+    print(f"{year} is not a Leap Year")
+
+# ---------------------------------------------------------------------------------------------
+5. Find the Factorial of a Number
+
+num = int(input("Enter a number to find its factorial: "))
+factorial = 1
+
+if num < 0:
+    print("Factorial does not exist for negative numbers")
+elif num == 0:
+    print("The factorial of 0 is 1")
+else:
+    for i in range(1, num + 1):
+        factorial *= i
+    print(f"The factorial of {num} is {factorial}")
+
+# ---------------------------------------------------------------------------------------------
+6. Check if a Number is Prime
+
+num = int(input("Enter a number to check if it is prime: "))
+
+if num > 1:
+    for i in range(2, num):
+        if num % i == 0:
+            print(f"{num} is not a prime number")
+            break
+    else:
+        print(f"{num} is a prime number")
+else:
+    print(f"{num} is not a prime number")
+
+# ---------------------------------------------------------------------------------------------
+7. Sum of Digits of a Number
+
+num = int(input("Enter a number to find the sum of its digits: "))
+sum_of_digits = 0
+
+while num > 0:
+    sum_of_digits += num % 10
+    num //= 10
+
+print(f"The sum of the digits is {sum_of_digits}")
+
+# ---------------------------------------------------------------------------------------------
+8. Check Whether a Number is Palindrome
+
+num = int(input("Enter a number to check if it's a palindrome: "))
+reverse_num = 0
+original_num = num
+
+while num > 0:
+    reverse_num = reverse_num * 10 + num % 10
+    num //= 10
+
+if original_num == reverse_num:
+    print(f"{original_num} is a palindrome")
+else:
+    print(f"{original_num} is not a palindrome")
+
+
+# ---------------------------------------------------------------------------------------------
+9. Count Vowels in a String
+
+text = input("Enter a string to count vowels: ")
+vowels = "aeiouAEIOU"
+vowel_count = 0
+
+for char in text:
+    if char in vowels:
+        vowel_count += 1
+
+print(f"The number of vowels in the string is {vowel_count}")
+
+# ---------------------------------------------------------------------------------------------
+10. Find the Average of Numbers Entered by User
+
+n = int(input("How many numbers do you want to average? "))
+total = 0
+
+for i in range(n):
+    value = float(input(f"Enter number {i+1}: "))
+    total += value
+
+average = total / n
+print(f"The average is {average}")
+
+# ---------------------------------------------------------------------------------------------
+
+Certainly! Below are **20 more basic Python programs** similar to the one you've provided. Each one follows a similar pattern where we ask for user input and then apply some simple logic to output a result.
+
+---
+
+### 1. **Check if Number is Divisible by 3**
+```python
+value = int(input("Enter a number: "))
+
+if value % 3 == 0:
+    print(f"{value} is divisible by 3")
+else:
+    print(f"{value} is not divisible by 3")
+```
+
+---
+
+### 2. **Check if Number is Divisible by 7**
+```python
+value = int(input("Enter a number: "))
+
+if value % 7 == 0:
+    print(f"{value} is divisible by 7")
+else:
+    print(f"{value} is not divisible by 7")
+```
+
+---
+
+### 3. **Check if a Number is a Multiple of 10**
+```python
+value = int(input("Enter a number: "))
+
+if value % 10 == 0:
+    print(f"{value} is a multiple of 10")
+else:
+    print(f"{value} is not a multiple of 10")
+```
+
+---
+
+### 4. **Check if the Number is Positive Even or Odd**
+```python
+value = int(input("Enter a number: "))
+
+if value > 0:
+    if value % 2 == 0:
+        print("Positive Even Number")
+    else:
+        print("Positive Odd Number")
+elif value < 0:
+    if value % 2 == 0:
+        print("Negative Even Number")
+    else:
+        print("Negative Odd Number")
+else:
+    print("Zero is neither positive nor negative")
+```
+
+---
+
+### 5. **Check if Number is Greater than 100**
+```python
+value = int(input("Enter a number: "))
+
+if value > 100:
+    print(f"{value} is greater than 100")
+else:
+    print(f"{value} is less than or equal to 100")
+```
+
+---
+
+### 6. **Check if the Number is Odd or Even**
+```python
+value = int(input("Enter a number: "))
+
+if value % 2 == 0:
+    print(f"{value} is an Even Number")
+else:
+    print(f"{value} is an Odd Number")
+```
+
+---
+
+### 7. **Check if the Number is Zero**
+```python
+value = int(input("Enter a number: "))
+
+if value == 0:
+    print("The number is Zero")
+else:
+    print("The number is non-zero")
+```
+
+---
+
+### 8. **Check if the Number is Less than 50**
+```python
+value = int(input("Enter a number: "))
+
+if value < 50:
+    print(f"{value} is less than 50")
+else:
+    print(f"{value} is greater than or equal to 50")
+```
+
+---
+
+### 9. **Check if the Number is Negative or Non-Negative**
+```python
+value = int(input("Enter a number: "))
+
+if value < 0:
+    print(f"{value} is a Negative Number")
+else:
+    print(f"{value} is a Non-Negative Number")
+```
+
+---
+
+### 10. **Check if Number is Even and Greater than 10**
+```python
+value = int(input("Enter a number: "))
+
+if value > 10 and value % 2 == 0:
+    print(f"{value} is Even and Greater than 10")
+else:
+    print(f"{value} is either Odd or Less than or Equal to 10")
+```
+
+---
+
+### 11. **Check if a Number is Between 1 and 100**
+```python
+value = int(input("Enter a number: "))
+
+if 1 <= value <= 100:
+    print(f"{value} is between 1 and 100")
+else:
+    print(f"{value} is outside the range of 1 to 100")
+```
+
+---
+
+### 12. **Check if the Number is Divisible by 2 or 5**
+```python
+value = int(input("Enter a number: "))
+
+if value % 2 == 0 or value % 5 == 0:
+    print(f"{value} is divisible by 2 or 5")
+else:
+    print(f"{value} is not divisible by 2 or 5")
+```
+
+---
+
+### 13. **Check if Number is an Integer**
+```python
+value = input("Enter a number: ")
+
+try:
+    int_value = int(value)
+    print(f"{value} is an Integer")
+except ValueError:
+    print(f"{value} is not an Integer")
+```
+
+---
+
+### 14. **Check if Number is a Multiple of 3 and 5**
+```python
+value = int(input("Enter a number: "))
+
+if value % 3 == 0 and value % 5 == 0:
+    print(f"{value} is a multiple of both 3 and 5")
+else:
+    print(f"{value} is not a multiple of both 3 and 5")
+```
+
+---
+
+### 15. **Check if Number is Less Than 10 or Greater Than 100**
+```python
+value = int(input("Enter a number: "))
+
+if value < 10 or value > 100:
+    print(f"{value} is either less than 10 or greater than 100")
+else:
+    print(f"{value} is between 10 and 100")
+```
+
+---
+
+### 16. **Check if the Number is Prime**
+```python
+value = int(input("Enter a number: "))
+
+if value > 1:
+    for i in range(2, value):
+        if value % i == 0:
+            print(f"{value} is not a prime number")
+            break
+    else:
+        print(f"{value} is a prime number")
+else:
+    print(f"{value} is not a prime number")
+```
+
+---
+
+### 17. **Check if the Number is a Square**
+```python
+import math
+
+value = int(input("Enter a number: "))
+
+sqrt_value = math.sqrt(value)
+if sqrt_value.is_integer():
+    print(f"{value} is a perfect square")
+else:
+    print(f"{value} is not a perfect square")
+```
+
+---
+
+### 18. **Check if Number is Between 50 and 150**
+```python
+value = int(input("Enter a number: "))
+
+if 50 <= value <= 150:
+    print(f"{value} is between 50 and 150")
+else:
+    print(f"{value} is outside the range of 50 to 150")
+```
+
+---
+19. **Check if the Number is Divisible by Both 2 and 3**
+```python
+value = int(input("Enter a number: "))
+
+if value % 2 == 0 and value % 3 == 0:
+    print(f"{value} is divisible by both 2 and 3")
+else:
+    print(f"{value} is not divisible by both 2 and 3")
+```
+
+20. **Check if the Number is Greater Than 200**
+```python
+value = int(input("Enter a number: "))
+
+if value > 200:
+    print(f"{value} is greater than 200")
+else:
+    print(f"{value} is less than or equal to 200")
